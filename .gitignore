@@ -26,6 +26,7 @@ PLANNING.md
 *.userosscache
 *.sln.docstates
 *.csproj.user
+*.slnx
 
 # Rider
 .idea/
@@ -36,6 +37,11 @@ PLANNING.md
 /coverage/
 *.coverage
 *.coveragexml
+
+# Logs
+/logs/
+*.log
+*.jsonl
 
 # OS Junk
 .DS_Store
@@ -57,11 +63,8 @@ $RECYCLE.BIN/
 appsettings.Development.json
 appsettings.Local.json
 
-# Logs
-*.log
-logs/
-
 # Docker
 .docker/
 docker-compose.override.yml
 .github/copilot-instructions.md
+

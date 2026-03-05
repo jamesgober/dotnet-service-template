@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <!-- JG .NET Library Collection -->
+    <!-- Uncomment packages as they become available on NuGet -->
+    <!-- <PackageReference Include="JG.ConfigKit" Version="1.0.*" /> -->
+    <!-- <PackageReference Include="JG.ErrorKit" Version="1.0.*" /> -->
+    <!-- <PackageReference Include="JG.LoggingKit" Version="1.0.*" /> -->
+    <!-- <PackageReference Include="JG.CacheKit" Version="1.0.*" /> -->
+    <!-- <PackageReference Include="JG.RateLimiter" Version="1.0.*" /> -->
+    <!-- <PackageReference Include="JG.HealthKit" Version="1.0.*" /> -->
+    <!-- <PackageReference Include="JG.AuthKit" Version="1.0.*" /> -->
+    <!-- <PackageReference Include="JG.EventKit" Version="1.0.*" /> -->
+    <!-- <PackageReference Include="JG.WorkerKit" Version="1.0.*" /> -->
+    <!-- <PackageReference Include="JG.AuditKit" Version="1.0.*" /> -->
+  </ItemGroup>
+</Project>

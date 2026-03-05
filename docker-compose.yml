@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  myservice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: myservice
+    ports:
+      - "5000:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - Service__Name=MyService
+      - Service__Version=1.0.0
+      - Logging__Level=Information
+      - Cache__Provider=memory
+      - RateLimiting__Global__PermitsPerWindow=100
+      - RateLimiting__Global__WindowSeconds=60
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/status"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+
+  # Uncomment to add Redis for distributed caching
+  # redis:
+  #   image: redis:7-alpine
+  #   container_name: myservice-redis
+  #   ports:
+  #     - "6379:6379"
+  #   volumes:
+  #     - redis-data:/data
+  #   restart: unless-stopped
+  #   healthcheck:
+  #     test: ["CMD", "redis-cli", "ping"]
+  #     interval: 10s
+  #     timeout: 3s
+  #     retries: 3
+
+# volumes:
+#   redis-data:
